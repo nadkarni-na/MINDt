@@ -32,7 +32,7 @@ conv=$(echo "$scale * 0.05" | bc -l | sed 's/^\./0./')
 twoblur=$(echo "$scale * 11" | bc -l | sed 's/^\./0./')
 
 if [[ $autofind == "yes" ]]; then
-	anat=$(find $procdir -name *__anat_n[0-9].nii.gz)
+	anat=$(find $procdir -name anat_n[0-9].nii.gz)
 	anat=$(dirname $anat)/$(basename -s .nii.gz $anat)
 else
 	anat=$2

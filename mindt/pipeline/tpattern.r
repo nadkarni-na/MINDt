@@ -1,3 +1,5 @@
+#!/usr/bin/Rscript
+
 ##$ACQ_obj_order=( 5 )
 #0 2 4 1 3
 ##$ACQ_obj_order=( 30 )

@@ -30,7 +30,7 @@ echo "12 Urad" $Urad
 echo "13 brainvol" $brainvol
 echo "14 scale" $scale
 
-python PVEnDCMtoNIfTI.py /usr/bin/dcmdump $rawimdir $NIfTIdir yes
+python -m PVEnDCMtoNIfTI.py /usr/bin/dcmdump $rawimdir $NIfTIdir yes
 IDsequencetypes.bash $NIfTIdir
 anattotemplate.bash $NIfTIdir yes 3dUnifize $brainvol $scale $brain $atlas $mask $brain $headweight $basetype $Urad
 perfFAIREPI.bash $NIfTIdir
