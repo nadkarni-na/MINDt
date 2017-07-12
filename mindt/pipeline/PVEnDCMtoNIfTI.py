@@ -226,9 +226,9 @@ def EnDCM_to_NII(dcmdump_path, EnDCM, save_directory, SIAPfix, valstart, splt1, 
         ppaff = rotate_affine(180, 'y')
     #not sure this is correct: a reflection may be necessary too
     if patpos == 'FFS':
-        ppaff = rotate_affine(180, 'x')
-    if patpos == 'HFP':
         ppaff = rotate_affine(180, 'z')
+    if patpos == 'HFP':
+        ppaff = rotate_affine(180, 'x')
     
     if SIAPfix == 'yes':
         affine = rotate_affine(270,'x') * rotate_affine(180,'y') * rotate_affine(180,'z') * ppaff * affine
